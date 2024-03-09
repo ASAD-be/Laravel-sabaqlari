@@ -9,5 +9,12 @@ class Application extends Model
 {
     use HasFactory;
 
-    protected $fillable = [''];
+    protected $fillable = [
+        'user_id',
+        'message',
+        'subject',
+        'file_url'
+    ];
+    
+    public function users(){return $this->hasMany(User::class);}
 }
